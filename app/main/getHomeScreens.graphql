@@ -1,0 +1,10 @@
+query getHomeScreens {
+  homeScreens {
+    id
+    category {
+      id
+      rankable
+      name
+    }
+  }
+}
