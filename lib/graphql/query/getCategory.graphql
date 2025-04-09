@@ -1,0 +1,15 @@
+query getCategory($id: ID!) {
+  category(id: $id) {
+    id
+    name
+    videos {
+      id
+      title
+      duration {
+        minutes
+        seconds
+      }
+      landscapeThumbnail
+    }
+  }
+}

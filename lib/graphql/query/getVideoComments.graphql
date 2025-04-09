@@ -1,0 +1,26 @@
+query getVideoComments($id: ID!, $first: Int, $after: String) {
+  videoComments(id: $id, first: $first, after: $after) {
+    id
+    allCount
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      cursor
+      node {
+        id
+        contents
+        user {
+          id
+          name
+          avatar
+        }
+        createdAt
+        likeNum
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+query getOriginalVideo($id: ID!) {
+  originalVideo(id: $id) {
+    title
+    description
+    landscapeThumbnail
+    likeNum
+    duration {
+      minutes
+      seconds
+    }
+  }
+}

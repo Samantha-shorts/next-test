@@ -3,7 +3,7 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
   schema: 'https://develop.api.samansa.com/graphql',
-  documents: ['app/**/*.graphql'],
+  documents: ['lib/graphql/query/*.graphql'],
   generates: {
     './lib/graphql/generated/': {
       preset: 'client',
