@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+映画情報を提供するサービスと仮定して、トップページとカテゴリ詳細ページと映画情報詳細ページを作ってください。
+
+**トップページ**ではカテゴリごとに映画サムネイルが並んでおり、カテゴリごとにカテゴリ詳細ページへのリンクをつけてください。また映画サムネイルをクリックすると詳細ページに遷移する形にしてください。
+
+**カテゴリ詳細ページ**では映画サムネイルが並んでおり、トップページ同様に映画サムネイルをクリックすると詳細ページに遷移する形にしてください。
+
+**映画情報詳細ページ**では、映画のタイトルと説明とlike数を表示し、右サイドバーで「コメント一覧」を表示してください。
+
+以下のGraphQL Queryを使ってください（Queryの定義はすでに `lib/graphql/query` 以下に入っています）。
+
+詳細や他のQueryを知りたい場合は [https://develop.api.samansa.com/graphiql](https://develop.api.samansa.com/graphiql) を確認してください。
+
+- getHomeScreens
+  - 映画一覧ページで表示する映画カテゴリとその映画一覧を返す
+- getCategory
+  - 映画カテゴリIDを指定することで、そのカテゴリに含まれる映画一覧を返す
+- getOriginalVideo
+  - 映画IDを指定することで、その詳細情報を返す
+- getVideoComments
+  - 映画IDを指定することで、その映画へのコメント一覧を返す
+
+実践的な工夫は大歓迎です！（例えば最初のgetHomeScreensでカテゴリのみ取得して、それぞれのカテゴリの映画は後から取得するようにするなど）
 
 ## Getting Started
 
@@ -28,9 +49,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
